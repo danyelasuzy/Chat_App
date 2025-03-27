@@ -1,5 +1,5 @@
 const ProfilePage = () => {
-  return <div>ProfilePage</div>;
+  return <div className="bg-[#cabce7] h-full -w-full">ProfilePage</div>;
 };
 
 export default ProfilePage;

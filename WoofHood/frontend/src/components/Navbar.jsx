@@ -6,8 +6,27 @@ const Navbar = () => {
       <div className="absolute z-10">
         <Logo />
       </div>
-      <div className="navbar bg-white border-gray-200 px-2 sm:px-4 py-2.5  shadow-sm mt-6 relative">
+      <div className="sm:items-center  navbar bg-white border-gray-200 px-2 sm:px-4 py-2.5  shadow-sm md:mt-3 relative">
         <div className="flex-1"></div>
+        <label className="input mr-2 w-1/2 text-sm px-2 py-1 sm:mr-5 sm:text-base sm:px-4 sm:py-2 md:w-1/4">
+          <svg
+            className="h-[1em] opacity-50"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+          >
+            <g
+              strokeLinejoin="round"
+              strokeLinecap="round"
+              strokeWidth="2.5"
+              fill="none"
+              stroke="currentColor"
+            >
+              <circle cx="11" cy="11" r="8"></circle>
+              <path d="m21 21-4.3-4.3"></path>
+            </g>
+          </svg>
+          <input type="search" required placeholder="Search" />
+        </label>
         <div className="flex gap-2">
           <div className="indicator">
             <svg
@@ -33,7 +52,7 @@ const Navbar = () => {
               role="button"
               className="btn btn-ghost btn-circle avatar"
             >
-              <div className="w-20 rounded-full">
+              <div className="w-20 rounded-full ">
                 <img
                   alt="Tailwind CSS Navbar component"
                   src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
