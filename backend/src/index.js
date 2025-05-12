@@ -6,10 +6,13 @@ import { connectDB } from "./lib/db.js";
 import cookieParser from "cookie-parser";
 import cors from "cors";
 
+import path from "path";
+
 dotenv.config();
 const app = express();
 
 const PORT = process.env.PORT;
+const__dirname = path.resolve();
 
 app.use(express.json({ limit: "5mb" }));
 app.use(cookieParser());
