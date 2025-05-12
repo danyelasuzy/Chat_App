@@ -22,7 +22,7 @@ export const ProfileBoard = () => {
   };
 
   return (
-    <div className="bg-[#eae4fc] w-1/4 h-screen py-18 flex flex-col items-center">
+    <div className="bg-[#eae4fc] w-1/4 h-3/4 my-6 py-16 flex flex-col items-center">
       <div className="flex flex-col items-center justify-center">
         <div className="text-center">
           <h1 className="text-2xl md:text-5xl font-semibold pt-2">Profile</h1>

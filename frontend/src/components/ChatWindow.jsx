@@ -1,5 +1,8 @@
 import { useChatStore } from "../store/useChatStore.js";
 import { useThemeStore } from "../store/useThemeStore.js";
+import { SideBar } from "./SideBar.jsx";
+import { NoChatSelected } from "./NoChatSelected.jsx";
+import { ChatContainer } from "./ChatContainer.jsx";
 
 const ChatWindow = () => {
   const { selectedUser } = useChatStore();
@@ -8,11 +11,14 @@ const ChatWindow = () => {
   return (
     <div
       data-theme={theme}
-      className=" w-3/4 py-10 px-8 flex items-start justify-center"
+      className=" flex-col-1  my-6 flex items-start justify-center shadow-gray-800 overflow-auto"
     >
-      <div className="flex items-center justify-center pt-20 px-4">
+      <div className="flex items-center justify-center px-4">
         <div className=" rounded-lg w-full">
-          <div className="flex h-full rounded-lg overflow-hidden"></div>
+          <div className="flex h-full rounded-lg overflow-hidden">
+            <SideBar />
+            {!selectedUser ? <NoChatSelected /> : <ChatContainer />}
+          </div>
         </div>
       </div>
     </div>
